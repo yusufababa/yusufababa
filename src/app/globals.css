@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* space-separated RGB channels so Tailwind can inject alpha via
+     rgb(var(--color-x) / <alpha-value>) — see tailwind.config.ts */
+  --color-bg: 255 255 255;
+  --color-surface: 250 250 250;
+  --color-ink: 18 18 18;
+  --color-grey: 107 107 107;
+  --color-border: 224 224 224;
+  --color-accent-green: 34 197 94;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg font-body text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
