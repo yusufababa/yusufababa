@@ -3,7 +3,10 @@ import { Container } from "@/components/ui/Container";
 import { projects } from "@/data/projects";
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  // simkash has its own dedicated route at app/work/simkash/page.tsx
+  return projects
+    .filter((project) => project.slug !== "simkash")
+    .map((project) => ({ slug: project.slug }));
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {

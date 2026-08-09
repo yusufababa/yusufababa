@@ -6,6 +6,7 @@ export type Project = {
   year: number;
   accent: string;
   caseStudyReady: boolean;
+  coverImage?: string;
 };
 
 // Placeholder data — swap in real case studies as they're written up.
@@ -17,7 +18,8 @@ export const projects: Project[] = [
     sector: "Fintech",
     year: 2025,
     accent: "#218C59",
-    caseStudyReady: false,
+    caseStudyReady: true,
+    coverImage: "/simkash/Cover.png",
   },
   {
     slug: "rydepro",

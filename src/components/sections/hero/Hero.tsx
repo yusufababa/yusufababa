@@ -12,7 +12,7 @@ export function Hero() {
         <Container className="relative z-10 pb-16 pt-40 md:pb-24 md:pt-48">
           <ScrollReveal>
             <div className="mx-auto flex max-w-xl flex-col items-center gap-5 text-center">
-              <h1 className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-[44px]">
+              <h1 className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-[44px] lg:text-6xl">
                 Designs that ship. Products that work.
               </h1>
               <p className="text-[15px] leading-relaxed text-grey sm:text-base">
@@ -25,7 +25,7 @@ export function Hero() {
                 </Link>
               </p>
               <div className="mt-2 flex items-center gap-4">
-                <Link href="/work">
+                <Link href="/#selected-work">
                   <Button variant="primary">Explore Work →</Button>
                 </Link>
                 <Link

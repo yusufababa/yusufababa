@@ -31,12 +31,12 @@ export function Footer() {
         </h2>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a href={siteConfig.resumeUrl} download>
+          <a href={siteConfig.resumeUrl} target="_blank" rel="noreferrer">
             <Button
               variant="primary"
               className="gap-2 bg-white text-ink hover:bg-white/90"
             >
-              Download Résumé
+              View Résumé
               <svg
                 width="16"
                 height="16"
@@ -45,7 +45,7 @@ export function Footer() {
                 aria-hidden="true"
               >
                 <path
-                  d="M8 2v8m0 0 3-3m-3 3-3-3M2.5 12.5v1a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-1"
+                  d="M6 3H3.5A1.5 1.5 0 0 0 2 4.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V10M9 2h5v5M14 2 7 9"
                   stroke="currentColor"
                   strokeWidth="1.4"
                   strokeLinecap="round"

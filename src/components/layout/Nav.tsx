@@ -98,7 +98,8 @@ export function Nav() {
             </a>
             <a
               href={siteConfig.resumeUrl}
-              download
+              target="_blank"
+              rel="noreferrer"
               className="transition-colors hover:text-white"
             >
               Resume
@@ -162,7 +163,12 @@ export function Nav() {
               <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
                 Email Me
               </a>
-              <a href={siteConfig.resumeUrl} download className="hover:text-white">
+              <a
+                href={siteConfig.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white"
+              >
                 Resume
               </a>
             </div>
