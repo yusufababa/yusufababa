@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { spaceGrotesk, manrope, geistMono } from "@/fonts";
 import { ConditionalNav } from "@/components/layout/ConditionalNav";
 import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -25,6 +26,7 @@ export default function RootLayout({
       className={cn(spaceGrotesk.variable, manrope.variable, geistMono.variable)}
     >
       <body className="flex min-h-screen flex-col">
+        <GoogleAnalytics gaId={siteConfig.gaId} />
         <ConditionalNav />
         <main className="flex-1">{children}</main>
         <ConditionalFooter />

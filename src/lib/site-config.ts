@@ -8,6 +8,7 @@ export const siteConfig = {
   bio: "I'm Yusuf Adam Baba, a product designer who codes. For 3+ years, I'm designing end-to-end flows & turning messy fintech, mobility and proptech problems into interfaces people actually use.",
   url: "https://yusufadam.com",
   email: "yusufababah50@gmail.com",
+  gaId: "G-SMHD8BEC35",
   whatsapp: "https://wa.me/2347083175021",
   resumeUrl: "https://drive.google.com/file/d/1A1SOQqgXmieAWn0_yP1Jds4PM3crGRjN/view?usp=sharing",
   // Replace with your real playlist link once it's up: open it in
