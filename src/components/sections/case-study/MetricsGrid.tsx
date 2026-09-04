@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import type { CaseStudyMetric } from "@/data/case-studies/simkash";
+import type { CaseStudyMetric } from "@/data/case-studies/types";
 
 export function MetricsGrid({ metrics }: { metrics: CaseStudyMetric[] }) {
   return (

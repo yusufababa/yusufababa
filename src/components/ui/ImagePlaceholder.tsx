@@ -5,6 +5,8 @@ export type CaseStudyImage = {
   src: string | null;
   caption: string;
   alt: string;
+  placeholderLabel?: string;
+  layout?: "portrait" | "wide";
 };
 
 export function ImagePlaceholder({
@@ -39,17 +41,22 @@ export function ImagePlaceholder({
             className="object-cover"
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-4 text-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
             <span
               aria-hidden
-              className="flex size-9 items-center justify-center rounded-full border"
+              className="flex size-10 items-center justify-center rounded-full border bg-white/70 text-lg backdrop-blur-sm"
               style={{ borderColor: accent, color: accent }}
             >
-              ⬚
+              +
             </span>
-            <p className="font-mono text-[10px] uppercase tracking-wide text-grey">
-              Image placeholder
+            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.16em] text-grey">
+              Mockup needed
             </p>
+            {image.placeholderLabel && (
+              <p className="mt-2 max-w-lg text-sm leading-relaxed text-ink/75">
+                {image.placeholderLabel}
+              </p>
+            )}
           </div>
         )}
       </div>

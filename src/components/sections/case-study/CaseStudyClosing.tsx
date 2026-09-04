@@ -2,14 +2,14 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { Button } from "@/components/ui/Button";
-import type { SimkashCaseStudy } from "@/data/case-studies/simkash";
+import type { CaseStudy } from "@/data/case-studies/types";
 import type { Project } from "@/data/projects";
 
 export function CaseStudyClosing({
   closing,
   nextProject,
 }: {
-  closing: SimkashCaseStudy["closing"];
+  closing: CaseStudy["closing"];
   nextProject: Project;
 }) {
   return (

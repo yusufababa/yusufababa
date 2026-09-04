@@ -20,7 +20,11 @@ export function ScreensGallery({
         <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {images.map((image, i) => (
             <ScrollReveal key={image.caption} delay={i * 0.05}>
-              <ImagePlaceholder image={image} accent={accent} frameClassName="aspect-[9/19]" />
+              <ImagePlaceholder
+                image={image}
+                accent={accent}
+                frameClassName="aspect-[9/19]"
+              />
             </ScrollReveal>
           ))}
         </div>

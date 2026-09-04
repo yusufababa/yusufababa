@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { spaceGrotesk, manrope, geistMono } from "@/fonts";
+import "@fontsource-variable/space-grotesk";
+import "@fontsource-variable/manrope";
+import { geistMono } from "@/fonts";
 import { ConditionalNav } from "@/components/layout/ConditionalNav";
 import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
-import { cn } from "@/lib/utils";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,10 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn(spaceGrotesk.variable, manrope.variable, geistMono.variable)}
-    >
+    <html lang="en" className={geistMono.variable}>
       <body className="flex min-h-screen flex-col">
         <GoogleAnalytics gaId={siteConfig.gaId} />
         <ConditionalNav />

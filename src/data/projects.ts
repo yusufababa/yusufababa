@@ -12,6 +12,16 @@ export type Project = {
 // Placeholder data — swap in real case studies as they're written up.
 export const projects: Project[] = [
   {
+    slug: "rydepro",
+    title: "RydePro",
+    meta: "Mobility · Rider, Web & Operations",
+    sector: "Mobility",
+    year: 2026,
+    accent: "#151515",
+    caseStudyReady: true,
+    coverImage: "/rydepro/cover.png",
+  },
+  {
     slug: "simkash",
     title: "Simkash",
     meta: "Fintech · Web & Mobile",
@@ -20,15 +30,6 @@ export const projects: Project[] = [
     accent: "#218C59",
     caseStudyReady: true,
     coverImage: "/simkash/Cover.png",
-  },
-  {
-    slug: "rydepro",
-    title: "RydePro",
-    meta: "Mobility · MVP 1.0",
-    sector: "Mobility",
-    year: 2024,
-    accent: "#1A1A1A",
-    caseStudyReady: false,
   },
   {
     slug: "homekey",

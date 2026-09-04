@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { SectionHeading } from "./SectionHeading";
-import type { CaseStudyPersona } from "@/data/case-studies/simkash";
+import type { CaseStudyPersona } from "@/data/case-studies/types";
 
 export function PersonasSection({
   personas,
@@ -32,7 +32,9 @@ export function PersonasSection({
                     {persona.initials}
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-ink">{persona.name}</h3>
+                    <h3 className="font-display text-lg font-semibold text-ink">
+                      {persona.name}
+                    </h3>
                     <p className="font-mono text-xs uppercase tracking-wide text-grey">
                       {persona.age} · {persona.role}
                     </p>
@@ -44,14 +46,20 @@ export function PersonasSection({
 
                 <div className="mt-6 space-y-4">
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-wide text-grey">Goal</p>
-                    <p className="mt-1 text-sm leading-relaxed text-ink">{persona.goal}</p>
+                    <p className="font-mono text-[11px] uppercase tracking-wide text-grey">
+                      Goal
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink">
+                      {persona.goal}
+                    </p>
                   </div>
                   <div>
                     <p className="font-mono text-[11px] uppercase tracking-wide text-grey">
                       Frustration
                     </p>
-                    <p className="mt-1 text-sm leading-relaxed text-ink">{persona.frustration}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink">
+                      {persona.frustration}
+                    </p>
                   </div>
                 </div>
 

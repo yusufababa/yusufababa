@@ -3,9 +3,9 @@ import { Container } from "@/components/ui/Container";
 import { projects } from "@/data/projects";
 
 export function generateStaticParams() {
-  // simkash has its own dedicated route at app/work/simkash/page.tsx
+  // Completed case studies have dedicated routes under app/work/[project]/page.tsx.
   return projects
-    .filter((project) => project.slug !== "simkash")
+    .filter((project) => !project.caseStudyReady)
     .map((project) => ({ slug: project.slug }));
 }
 

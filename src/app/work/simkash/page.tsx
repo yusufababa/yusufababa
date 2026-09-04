@@ -20,7 +20,10 @@ export default function SimkashCaseStudyPage() {
     <>
       <CaseStudyTopBar />
       <CaseStudyHero project={project} hero={simkashCaseStudy.hero} />
-      <ProblemSolution problem={simkashCaseStudy.problem} solution={simkashCaseStudy.solution} />
+      <ProblemSolution
+        problem={simkashCaseStudy.problem}
+        solution={simkashCaseStudy.solution}
+      />
       <MetricsGrid metrics={simkashCaseStudy.metrics} />
       <ProcessSection process={simkashCaseStudy.process} />
       <PersonasSection personas={simkashCaseStudy.personas} accent={project.accent} />

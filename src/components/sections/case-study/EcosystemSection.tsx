@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { SectionHeading } from "./SectionHeading";
-import type { EcosystemTier } from "@/data/case-studies/simkash";
+import type { EcosystemTier } from "@/data/case-studies/types";
 
 export function EcosystemSection({
   tiers,

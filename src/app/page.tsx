@@ -1,11 +1,11 @@
 import { Hero } from "@/components/sections/hero/Hero";
-import { ProjectsRail } from "@/components/sections/projects/ProjectsRail";
+import { ProjectsGrid } from "@/components/sections/projects/ProjectsGrid";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ProjectsRail />
+      <ProjectsGrid />
     </>
   );
 }

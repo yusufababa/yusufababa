@@ -3,14 +3,14 @@ import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { HeroVisual } from "./HeroVisual";
 import type { Project } from "@/data/projects";
-import type { SimkashCaseStudy } from "@/data/case-studies/simkash";
+import type { CaseStudy } from "@/data/case-studies/types";
 
 export function CaseStudyHero({
   project,
   hero,
 }: {
   project: Project;
-  hero: SimkashCaseStudy["hero"];
+  hero: CaseStudy["hero"];
 }) {
   return (
     <section className="pb-16 pt-24 md:pb-20 md:pt-28">
@@ -32,15 +32,19 @@ export function CaseStudyHero({
             <span>Duration · {hero.duration}</span>
             <span className="size-1 rounded-full bg-border" />
             <span>{hero.platforms.join(" · ")}</span>
-            <span className="size-1 rounded-full bg-border" />
-            <Link
-              href={hero.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-ink underline decoration-from-font underline-offset-4 transition-opacity hover:opacity-60"
-            >
-              Visit simkash.com ↗
-            </Link>
+            {hero.liveLinks.map((link) => (
+              <span key={link.url} className="flex items-center gap-6">
+                <span className="size-1 rounded-full bg-border" />
+                <Link
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-ink underline decoration-from-font underline-offset-4 transition-opacity hover:opacity-60"
+                >
+                  {link.label} ↗
+                </Link>
+              </span>
+            ))}
           </div>
         </ScrollReveal>
 

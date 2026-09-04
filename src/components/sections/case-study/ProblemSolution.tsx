@@ -1,14 +1,14 @@
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { SectionHeading } from "./SectionHeading";
-import type { SimkashCaseStudy } from "@/data/case-studies/simkash";
+import type { CaseStudy } from "@/data/case-studies/types";
 
 export function ProblemSolution({
   problem,
   solution,
 }: {
-  problem: SimkashCaseStudy["problem"];
-  solution: SimkashCaseStudy["solution"];
+  problem: CaseStudy["problem"];
+  solution: CaseStudy["solution"];
 }) {
   return (
     <section className="py-16 md:py-20">

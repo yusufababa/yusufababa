@@ -1,57 +1,13 @@
-import type { CaseStudyImage } from "@/components/ui/ImagePlaceholder";
+import type { CaseStudy } from "./types";
 
-export type { CaseStudyImage };
-export type CaseStudyMetric = { label: string; value: string };
-export type ProcessStep = { step: string; description: string };
-export type CaseStudyPersona = {
-  name: string;
-  initials: string;
-  age: number;
-  role: string;
-  location: string;
-  goal: string;
-  frustration: string;
-  quote: string;
-};
-export type EcosystemTier = { label: string; description: string };
-
-export type SimkashCaseStudy = {
-  hero: {
-    tagline: string;
-    role: string;
-    duration: string;
-    platforms: string[];
-    liveUrl: string;
-    image: CaseStudyImage;
-  };
-  problem: {
-    eyebrow: string;
-    heading: string;
-    paragraphs: string[];
-  };
-  solution: {
-    eyebrow: string;
-    heading: string;
-    paragraphs: string[];
-    pillars: string[];
-  };
-  metrics: CaseStudyMetric[];
-  process: ProcessStep[];
-  personas: CaseStudyPersona[];
-  flow: { title: string; image: CaseStudyImage };
-  ecosystem: EcosystemTier[];
-  gallery: CaseStudyImage[];
-  closing: { heading: string; body: string };
-};
-
-export const simkashCaseStudy: SimkashCaseStudy = {
+export const simkashCaseStudy: CaseStudy = {
   hero: {
     tagline:
       "A single app for Nigeria's mobile money, bill payments, and telecom access — plus the multi-tier agent network that powers it.",
     role: "Sole UI/UX Designer",
     duration: "6 months",
     platforms: ["Web", "Mobile", "Admin dashboards"],
-    liveUrl: "https://simkash.com",
+    liveLinks: [{ label: "Visit simkash.com", url: "https://simkash.com" }],
     image: {
       src: "/simkash/Cover.png",
       caption: "Simkash wallet home screen",
@@ -98,7 +54,8 @@ export const simkashCaseStudy: SimkashCaseStudy = {
     },
     {
       step: "Hi-fi design",
-      description: "Built out the full design system and 250+ screens across web, mobile, and admin.",
+      description:
+        "Built out the full design system and 250+ screens across web, mobile, and admin.",
     },
     {
       step: "Testing & iteration",
@@ -143,7 +100,10 @@ export const simkashCaseStudy: SimkashCaseStudy = {
     { label: "Partner / Agent", description: "SIM inventory, device dashboard" },
     { label: "Simkash Pro", description: "Upgraded agent, commission dashboard" },
     { label: "State Coordinator", description: "Regional oversight, partner management" },
-    { label: "Regional Manager", description: "Multi-state oversight, coordinator analytics" },
+    {
+      label: "Regional Manager",
+      description: "Multi-state oversight, coordinator analytics",
+    },
     { label: "Operational Manager", description: "Day-to-day operations dashboard" },
     { label: "General Manager", description: "Executive dashboard, commissions" },
     { label: "Investor Panel", description: "Investment tracking, profit withdrawal" },

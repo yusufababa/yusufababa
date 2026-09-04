@@ -11,6 +11,8 @@
   --color-grey: 107 107 107;
   --color-border: 224 224 224;
   --color-accent-green: 34 197 94;
+  --font-space-grotesk: "Space Grotesk Variable", Arial, sans-serif;
+  --font-manrope: "Manrope Variable", Arial, sans-serif;
 }
 
 @layer base {
