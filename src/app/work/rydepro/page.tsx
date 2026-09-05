@@ -43,7 +43,7 @@ export default function RydeProCaseStudyPage() {
         image={rydeproCaseStudy.flow.image}
         accent={project.accent}
         video={{
-          src: "/rydepro/booking-prototype.mp4",
+          src: "/rydepro/booking-prototype.mp4?v=web-optimized",
           poster: "/rydepro/cover.png",
         }}
       />
